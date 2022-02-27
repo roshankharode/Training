@@ -269,6 +269,21 @@ public class Documentation {
 //				The File class from the java.io package, allows us to work with files.
 //
 //				To use the File class, create an object of the class, and specify the filename
-	
+	                        public class ReadFile {
+  public static void main(String[] args) {
+    try {
+      File myObj = new File("filename.txt");
+      Scanner myReader = new Scanner(myObj);
+      while (myReader.hasNextLine()) {
+        String data = myReader.nextLine();
+        System.out.println(data);
+      }
+      myReader.close();
+    } catch (FileNotFoundException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+  }
+}
 	}
 }
