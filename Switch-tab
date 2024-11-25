@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Menu Example</title>
+  <style>
+    /* Style for the horizontal menu */
+    .menu-bar {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    .menu-bar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu-bar a:hover {
+      background-color: #575757;
+    }
+
+    /* Style for the display area */
+    .display-area {
+      margin: 20px auto;
+      text-align: center;
+      font-size: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Horizontal Menu -->
+  <div class="menu-bar">
+    <a href="#" onclick="changeValue('Home Content')">Home</a>
+    <a href="#" onclick="changeValue('About Us Content')">About Us</a>
+    <a href="#" onclick="changeValue('Services Content')">Services</a>
+    <a href="#" onclick="changeValue('Contact Us Content')">Contact Us</a>
+  </div>
+
+  <!-- Display Area -->
+  <div class="display-area" id="displayArea">
+    Click on the menu items to display their content here.
+  </div>
+
+  <script>
+    // Function to change the content in the display area
+    function changeValue(content) {
+      const displayArea = document.getElementById('displayArea');
+      displayArea.textContent = content;
+    }
+  </script>
+</body>
+</html>
